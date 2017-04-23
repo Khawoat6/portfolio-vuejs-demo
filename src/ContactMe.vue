@@ -30,11 +30,7 @@ export default {
 
     data() {
         return {
-            posts: [],
-            blog_url: 'http://blog.aimanbaharum.com',
-            github_url: 'https://github.com/aimanbaharum',
-            twitter_url: 'https://twitter.com/_aimanb',
-            facebook_url: 'http://stackoverflow.com/users/996701/aimanb'
+            posts: []
         }
     },
 

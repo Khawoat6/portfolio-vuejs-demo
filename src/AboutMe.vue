@@ -20,7 +20,11 @@ export default {
                 <b>Favorite motto:</b> My life is a mess, but I like to keep my code clean :^)
                 <br><br>
                 This is a demo of my portfolio website using Vue JS and UIKit CSS framework. Source code can be found on <b><a href="https://github.com/aimanbaharum/portfolio-uikit-demo">here</a></b>.
-                `
+                `,
+            blog_url: 'http://blog.aimanbaharum.com',
+            github_url: 'https://github.com/aimanbaharum',
+            twitter_url: 'https://twitter.com/_aimanb',
+            facebook_url: 'http://stackoverflow.com/users/996701/aimanb'
         }
     }
 }
