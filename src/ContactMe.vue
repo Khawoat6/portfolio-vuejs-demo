@@ -5,55 +5,62 @@
         <div class="uk-grid-small uk-child-width-expand@s" uk-grid>
             <div>
                 <h2>About Me</h2>
-                <p class="uk-text-meta">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <p class="uk-text-meta">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
-                </p>
-                <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
-                <a href="" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: facebook"></a>
-                <a href="" class="uk-icon-button" uk-icon="icon: google-plus"></a>
+                <about-me></about-me>
             </div>
             <div>
-                <h2>What's New</h2>
-                <ul class="uk-list uk-list-divider">
-                    <li>
-                        <article class="uk-comment">
-                            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <img class="uk-comment-avatar" src="http://lorempixel.com/30/30" width="80" height="80" alt="">
-                                </div>
-                                <div class="uk-width-expand">
-                                    <p class="uk-text-lead"><a class="uk-link-reset" href="#">My post from blog article</a></p>
-                                    <p class="uk-text-meta"><span class="red">Web Design</span> &ndash; 27 January 1993 &ndash; <span class="red">Admin</span></p>
-                                </div>
-                            </header>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="uk-comment">
-                            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                                <div class="uk-width-auto">
-                                    <img class="uk-comment-avatar" src="http://lorempixel.com/30/30" width="80" height="80" alt="">
-                                </div>
-                                <div class="uk-width-expand">
-                                    <p class="uk-text-lead"><a class="uk-link-reset" href="#">My post from blog article</a></p>
-                                    <p class="uk-text-meta"><span class="red">Web Design</span> &ndash; 27 January 1993 &ndash; <span class="red">Admin</span></p>
-                                </div>
-                            </header>
-                        </article>
-                    </li>
-                </ul>
+                <h2>Latest Articles</h2>
+                <blog-posts v-for="post in posts" :key="post.id" v-bind:post="post"></blog-posts>
+                <a class="uk-badge" target="_blank" :href="blog_url">Read More&hellip;</a>
             </div>
         </div>
 
         </div>
     </div>
 </template>
+
+<script>
+import BlogPosts from './BlogPosts.vue';
+import AboutMe from './AboutMe.vue';
+
+export default {
+    components: {
+        'blog-posts': BlogPosts,
+        'about-me': AboutMe
+    },
+
+    data() {
+        return {
+            posts: [],
+            blog_url: 'http://blog.aimanbaharum.com',
+            github_url: 'https://github.com/aimanbaharum',
+            twitter_url: 'https://twitter.com/_aimanb',
+            facebook_url: 'http://stackoverflow.com/users/996701/aimanb'
+        }
+    },
+
+    created() {
+        this.$http.get(ghost.url.api('posts', {limit: 3})) // Read http://api.ghost.org/docs/ajax-calls-from-an-external-website
+            .then(response => {
+                if (response.ok) {
+                    var response_data = response.data.posts;
+                    
+                    response_data.forEach(element => {
+                            var d = new Date(element.updated_at);
+                            var dateStr = ("0" + d.getDate()).slice(-2) + "/" + ("0"+(d.getMonth()+1)).slice(-2) + "/" + d.getFullYear();
+
+                            this.posts.push({
+                                title: element.title,
+                                updated_at: dateStr,
+                                author: 'Aiman Baharum',
+                                tag: 'Article',
+                                img: 'http://loremflickr.com/100/80?random=4',
+                                url: 'http://blog.aimanbaharum.com' + element.url
+                            })
+                        }, this);
+                }
+            }, response => {
+                console.log(response);
+            });
+    }
+}
+</script>

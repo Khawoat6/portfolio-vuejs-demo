@@ -2,6 +2,11 @@
 
 > A single-page portfolio website using UIKit framework and Vue JS
 
+### Project description:
+
+- Vue JS is built using npm (please see Build Setup section below)
+- UIKit is installed via script tag
+
 ## Build Setup
 
 ``` bash
@@ -15,4 +20,8 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### TODO
+
+- ~~vue js integration~~
+- ~~load ghost api~~
+- mobile responsive

@@ -1,13 +1,14 @@
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import App from './App.vue'
-import BlogPosts from './BlogPosts.vue';
 import Header from './Header.vue';
 import Banner from './Banner.vue';
 import Projects from './Projects.vue';
 import ContactMe from './ContactMe.vue';
 import Footer from './Footer.vue';
 
-Vue.component('blog-posts', BlogPosts);
+Vue.use(VueResource);
+
 Vue.component('header-section', Header);
 Vue.component('banner-section', Banner);
 Vue.component('projects-section', Projects);

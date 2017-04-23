@@ -15,8 +15,8 @@
 export default {
     data() { // ES6 syntax for lambda expression
         return {
-            title: 'I\'m a web developer based in Malaysia',
-            subtitle: 'Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.',
+            title: 'I\'m a mobile/web developer based in Kuala Lumpur.',
+            subtitle: 'Yes, you read that right.',
         }
     }
 }
