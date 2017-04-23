@@ -6,8 +6,8 @@
     <p class="uk-text-meta" v-html="lorem">
     </p>
     <a :href="twitter_url" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
-    <a :href="facebook_url" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: facebook"></a>
-    <a :href="github_url" class="uk-icon-button" uk-icon="icon: github"></a>
+    <a :href="email" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: mail"></a>
+    <a :href="github_url" class="uk-icon-button" uk-icon="icon: github-alt"></a>
 </div>
 </template>
 
@@ -19,12 +19,12 @@ export default {
             lorem: `
                 <b>Favorite motto:</b> My life is a mess, but I like to keep my code clean :^)
                 <br><br>
-                This is a demo of my portfolio website using Vue JS and UIKit CSS framework. Source code can be found on <b><a href="https://github.com/aimanbaharum/portfolio-uikit-demo">here</a></b>.
+                This is a demo of my portfolio website using Vue JS and UIKit CSS framework. Source code can be found <b><a href="https://github.com/aimanbaharum/portfolio-uikit-demo">here</a></b>.
                 `,
             blog_url: 'http://blog.aimanbaharum.com',
             github_url: 'https://github.com/aimanbaharum',
             twitter_url: 'https://twitter.com/_aimanb',
-            facebook_url: 'http://stackoverflow.com/users/996701/aimanb'
+            email: 'mailto:aiman.baharum@outlook.com'
         }
     }
 }

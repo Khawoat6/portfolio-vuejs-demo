@@ -4,13 +4,13 @@
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
                 <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
-                        <li><strong class="logo">aiman<span class="red">baharum</span></strong></li>
+                        <li><p class="logo uk-text-large uk-text-bold">aiman<span class="red">baharum</span></p></li>
                     </ul>
                 </div>
                 <div class="uk-navbar-right">
 
                     <ul class="uk-breadcrumb">
-                        <li class="uk-active"><a href="#projects" uk-scroll>portfolio</a></li>
+                        <li><a href="#projects" uk-scroll>portfolio</a></li>
                         <li><a href="#contact-me" uk-scroll>about me</a></li>
                         <li><a href="#contact-me" uk-scroll>contact me</a></li>
                     </ul>
