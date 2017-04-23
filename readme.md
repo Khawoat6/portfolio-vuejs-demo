@@ -1,6 +1,6 @@
-# netccentric-demo
+# Demo Portfolio Website
 
-> A Vue.js project
+> A single-page portfolio website using UIKit framework and Vue JS
 
 ## Build Setup
 
