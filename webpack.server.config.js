@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/main.server.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: './dist/',
     filename: 'build.js',
     // Outputs node-compatible modules instead of browser-compatible
     libraryTarget: 'commonjs2'

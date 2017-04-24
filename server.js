@@ -17,7 +17,7 @@ const bundleRenderer = createBundleRenderer(
 const app = express();
 
 // Serve static assets from ./dist on the /dist route.
-app.use('/dist', express.static('dist'));
+app.use('dist', express.static('dist'));
 
 // Render all other routes with the bundleRenderer.
 app.get('*', (req, res) => {
@@ -29,4 +29,4 @@ app.get('*', (req, res) => {
 });
 
 // Bind the app to this port.
-app.listen(8080);
+app.listen(8081);
