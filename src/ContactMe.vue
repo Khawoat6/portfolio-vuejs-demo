@@ -30,6 +30,7 @@ export default {
 
     data() {
         return {
+            blog_url: 'http://blog.aimanbaharum.com',
             posts: []
         }
     },
