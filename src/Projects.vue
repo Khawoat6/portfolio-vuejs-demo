@@ -4,7 +4,7 @@
 
             <h2>My Latest Projects</h2>
 
-            <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+            <div class="uk-grid-small uk-child-width-expand@s uk-text-center" uk-grid>
                 <project-card v-for="project in projects" :key="project.id" v-bind:project="project"></project-card>
             </div>
         </div>
