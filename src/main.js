@@ -7,6 +7,8 @@ import Projects from './Projects.vue';
 import ContactMe from './ContactMe.vue';
 import Footer from './Footer.vue';
 
+require('./assets/css/main.scss'); // ask SCSS loader to include this for our bundled source later
+
 Vue.use(VueResource);
 
 Vue.component('header-section', Header);

@@ -24,4 +24,6 @@ npm run build
 
 - ~~vue js integration~~
 - ~~load ghost api~~
-- mobile responsive
+- ~~mobile responsive~~
+- blog post
+- testing

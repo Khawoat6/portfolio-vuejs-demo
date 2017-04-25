@@ -10,6 +10,16 @@ module.exports = {
   },
   module: {
     rules: [
+			{
+				test: /\.js$/, // include .js files
+				enforce: "pre", // preload the jshint loader
+				exclude: /node_modules/, // exclude any and all files in the node_modules folder
+				use: [
+					{
+						loader: "jshint-loader"
+					}
+				]
+			},
       {
         test: /\.vue$/,
         loader: 'vue-loader',
@@ -30,6 +40,11 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.scss$/, // regex to search file with .css
+        loader: 'style-loader!css-loader!sass-loader' // styling loader for webpack
+
       }
     ]
   },
