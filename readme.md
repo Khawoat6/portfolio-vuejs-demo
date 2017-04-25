@@ -25,5 +25,5 @@ npm run build
 - ~~vue js integration~~
 - ~~load ghost api~~
 - ~~mobile responsive~~
-- blog post
+- blog post ([view draft](https://github.com/aimanbaharum/random-wiki/blob/master/_code_walkthroughs/vuejs_tutorial.md))
 - testing
