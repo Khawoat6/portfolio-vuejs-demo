@@ -3,29 +3,25 @@
         <div class="container">
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
                 <div class="uk-navbar-left">
-                    <ul class="uk-navbar-nav">
-                        <li><p class="logo uk-text-large uk-text-bold">aiman<span class="red">baharum</span></p></li>
-                    </ul>
+                    <a class="uk-navbar-item uk-logo uk-text-bold" :href="home_url">aiman<span class="red">baharum</span></a>
                 </div>
-                <div class="uk-navbar-right">
-
-                    <ul class="uk-breadcrumb">
-                        <li><a href="#projects" uk-scroll>portfolio</a></li>
-                        <li><a href="#contact-me" uk-scroll>about me</a></li>
-                        <li><a href="#contact-me" uk-scroll>contact me</a></li>
-                    </ul>
-
-                </div>
+                
+                <menulist></menulist>
             </nav>
         </div>
     </div>
 </template>
 
 <script>
+import MenuList from './MenuList.vue';
+
 export default {
+    components: {
+        'menulist': MenuList
+    },
     data() { // ES6 syntax for lambda expression
         return {
-            title: 'I\'m a mobile/web developer based in Malaysia'
+            home_url: document.URL,
         }
     }
 }

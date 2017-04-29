@@ -27,3 +27,4 @@ npm run build
 - ~~mobile responsive~~
 - blog post ([view draft](https://github.com/aimanbaharum/random-wiki/blob/master/_code_walkthroughs/vuejs_tutorial.md))
 - testing
+- analytics
