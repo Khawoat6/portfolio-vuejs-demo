@@ -2,6 +2,8 @@
 
 > A single-page portfolio website using UIKit framework and Vue JS
 
+[Portfolio link](http://www.aimanbaharum.com)
+
 ### Project description:
 
 - Vue JS is built using npm (please see Build Setup section below)
@@ -27,4 +29,4 @@ npm run build
 - ~~mobile responsive~~
 - blog post ([view draft](https://github.com/aimanbaharum/random-wiki/blob/master/_code_walkthroughs/vuejs_tutorial.md))
 - testing
-- analytics
+- ~~analytics~~
