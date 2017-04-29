@@ -3,9 +3,7 @@
 
         <div class="menu-expand">
             <ul class="uk-navbar-nav">
-                <li><a :href="project_section" uk-scroll>Portfolio</a></li>
-                <li><a :href="contact_section" uk-scroll>About Me</a></li>
-                <li><a :href="contact_section" uk-scroll>Contact Me</a></li>
+                <li v-for="item in items"><a :href="item.anchor">{{ item.name }}</a></li>
             </ul>
         </div>
         
@@ -17,9 +15,7 @@
                     </a>
                     <div class="uk-navbar-dropdown">
                         <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li><a :href="project_section" uk-scroll>Portfolio</a></li>
-                            <li><a :href="contact_section" uk-scroll>About Me</a></li>
-                            <li><a :href="contact_section" uk-scroll>Contact Me</a></li>
+                            <li v-for="item in items" :key="item.id"><a :href="item.anchor">{{ item.name }}</a></li>
                         </ul>
                     </div>
                 </li>
@@ -34,8 +30,11 @@ export default {
 
     data() { // ES6 syntax for lambda expression
         return {
-            project_section: '#projects',
-            contact_section: '#contact-me',
+            items: [
+                { name: 'Portfolio', anchor: '#projects' },
+                { name: 'About Me', anchor: '#contact-me' },
+                { name: 'Contact Me', anchor: '#contact-me' }
+            ]
         }
     }
 }
