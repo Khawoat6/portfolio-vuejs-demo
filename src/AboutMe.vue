@@ -5,9 +5,9 @@
     </p>
     <p class="uk-text-meta" v-html="lorem">
     </p>
-    <a :href="twitter_url" class="uk-icon-button uk-margin-small-right" uk-icon="icon: twitter"></a>
-    <a :href="email" class="uk-icon-button  uk-margin-small-right" uk-icon="icon: mail"></a>
+    <a :href="twitter_url" class="uk-icon-button" uk-icon="icon: twitter"></a>
     <a :href="github_url" class="uk-icon-button" uk-icon="icon: github-alt"></a>
+    <a :href="email" class="uk-icon-button" uk-icon="icon: mail"></a>
 </div>
 </template>
 
@@ -19,7 +19,6 @@ export default {
             lorem: `
                 <b>Favorite motto:</b> My life is a mess, but I like to keep my code clean :^)
                 <br><br>
-                This is a demo of my portfolio website using Vue JS and UIKit CSS framework. Source code can be found <b><a href="https://github.com/aimanbaharum/portfolio-uikit-demo">here</a></b>.
                 `,
             github_url: 'https://github.com/aimanbaharum',
             twitter_url: 'https://twitter.com/_aimanb',

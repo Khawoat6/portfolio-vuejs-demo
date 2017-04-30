@@ -36,7 +36,7 @@ export default {
     },
 
     created() {
-        this.$http.get(ghost.url.api('posts', {limit: 3})) // Read http://api.ghost.org/docs/ajax-calls-from-an-external-website
+        this.$http.get(ghost.url.api('posts', {limit: 4})) // Read http://api.ghost.org/docs/ajax-calls-from-an-external-website
             .then(response => {
                 if (response.ok) {
                     var response_data = response.data.posts;
@@ -50,7 +50,7 @@ export default {
                                 updated_at: dateStr,
                                 author: 'Aiman Baharum',
                                 tag: 'Article',
-                                img: 'http://loremflickr.com/100/80?random=4',
+                                // img: 'http://loremflickr.com/100/80?random=4',
                                 url: 'http://blog.aimanbaharum.com' + element.url
                             })
                         }, this);
