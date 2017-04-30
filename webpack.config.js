@@ -42,7 +42,7 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/, // regex to search file with .css
+        test: /\.(scss|css)$/, // regex to search file with .css
         loader: 'style-loader!css-loader!sass-loader' // styling loader for webpack
 
       }

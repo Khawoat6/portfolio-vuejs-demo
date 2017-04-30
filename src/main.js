@@ -1,6 +1,7 @@
-import Vue from 'vue'
-import VueResource from 'vue-resource'
-import App from './App.vue'
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+
+import App from './App.vue';
 import Header from './Header.vue';
 import Banner from './Banner.vue';
 import Projects from './Projects.vue';
@@ -8,6 +9,7 @@ import ContactMe from './ContactMe.vue';
 import Footer from './Footer.vue';
 
 require('./assets/css/main.scss'); // ask SCSS loader to include this for our bundled source later
+require('./assets/css/uikit.min.css'); // ask SCSS loader to include this for our bundled source later
 
 Vue.use(VueResource);
 
@@ -20,4 +22,4 @@ Vue.component('footer-section', Footer);
 new Vue({
   el: '#app',
   render: h => h(App)
-})
+});
